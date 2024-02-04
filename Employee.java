@@ -1,4 +1,4 @@
-public class Employee {
+public abstract class Employee {
     int patientHealth;
 
     public Employee() {
@@ -9,7 +9,16 @@ public class Employee {
         return this.patientHealth;
     }
 
-    public void setPatientHealth(int newPatientHealth) {
+    public void setPatientHealth(int patientHealth) {
         this.patientHealth = patientHealth;
     }
+
+    @Override
+    public String toString() {
+        String employeeDetails = "The patient's health for this employee is " + patientHealth;
+
+        return employeeDetails;
+    }
+
+    public abstract double calculatePay();
 }
