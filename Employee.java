@@ -1,4 +1,4 @@
-public class Employee {
+public abstract class Employee {
     int patientHealth;
 
     public Employee() {
@@ -19,4 +19,6 @@ public class Employee {
 
         return employeeDetails;
     }
+
+    public abstract double calculatePay();
 }
